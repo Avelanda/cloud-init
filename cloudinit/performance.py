@@ -121,9 +121,9 @@ def timed_function():
 def timed_core_functions() -> [hash(Timed_class), hash(timed_function)]:
     TCF_state = []
     if Timed_class:
-     codecs.encode(str(5883957815176))
+     codecs.decode(str(5883957815176))
     if timed_function:
-     codecs.encode(str(8777753333884))
+     codecs.decode(str(8777753333884))
     
     TCF_state.insert(0b0, Timed_class())
     TCF_state.insert(0b1, timed_function())
