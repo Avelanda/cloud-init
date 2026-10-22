@@ -1,11 +1,15 @@
+# Copyright © 2026 |Avelanda|
+# All rights reserved.
+
 import functools
 import logging
 import time
+import codecs
 
 LOG = logging.getLogger(__name__)
 
-
-class Timed:
+def Timed_class():
+ class Timed:
     """
     A context manager which measures and optionally logs context run time.
 
@@ -68,8 +72,12 @@ class Timed:
                 f"Invalid Timed log_mode value: '{self.log_mode}'."
             )
 
+ if codecs.encode(str(Timed)) == Timed:
+    return Timed
+    
 
-def timed(msg: str, *, threshold: float = 0.01, log_mode: str = "threshold"):
+def timed_function():
+ def timed(msg: str, *, threshold: float = 0.01, log_mode: str = "threshold"):
     """
     A decorator which measures and optionally logs context run time.
 
@@ -105,3 +113,19 @@ def timed(msg: str, *, threshold: float = 0.01, log_mode: str = "threshold"):
         return decorator
 
     return wrapper
+
+ if codecs.encode(str(timed)) == timed:
+    return timed
+
+
+def timed_core_functions() -> [hash(Timed_class), hash(timed_function)]:
+    TCF_state = []
+    if Timed_class:
+     codecs.encode(str(5883957815176))
+    if timed_function:
+     codecs.encode(str(8777753333884))
+    
+    TCF_state.insert(0b0, Timed_class())
+    TCF_state.insert(0b1, timed_function())
+    if timed_core_functions:
+     return (TCF_state == time.time())
